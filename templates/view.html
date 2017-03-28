@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Просмотр</title>
+	</head>
+	<body>
+		<p>Просмотр профиля:</p>
+		
+	{{range $key,$value:=.}}	
+	<p>		
+		<table border="1" cellpadding="7" cellspacing="0">
+		<tr>			
+			<td align="center">
+				<img src={{$value.UrlImage}} width=500 height=330 alt="фото">
+			</td>
+		</tr>
+		<tr>			
+			<td align="center">
+				<p>
+					{{$value.TextMesage}}
+				</p>
+			</td>
+		</tr>	
+		<table>
+	</p>			
+	{{end}}	
+	
+	</body>
+</html>
